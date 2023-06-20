@@ -9,5 +9,14 @@ Current deployment page: https://github.com/Theredblood53/Minecraft-Stack-Calcul
 
 # Changelog
 
+### Version 1.0
+Changelog:
+
+-Added more assets
+
+-Added... the calculator
+
+-Added a checkbox to calculate 16 items stacks
+
 ### Version 0
 -Just to add the main files to github

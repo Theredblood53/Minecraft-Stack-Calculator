@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
+	
 	<head>
+		
 		<title>Minecraft Stack Calculator by Theredblood</title>
 
 		<link rel="icon" href="icon.png">	
 	
+		<script src="script.js"></script>
+		
 		<style>
 		
 		@font-face
@@ -20,22 +24,85 @@
 			background-attachment: fixed;
 			color: white;
 		}
-
-		h1
+		
+		button
 		{
+  			background-image: url("button/notPressed.png");
+ 		 	background-repeat: no-repeat;
+		 	background-position: 50% 50%;
+			background-size: contain;
+			font-family:Minecraftia;
+			font-size: 20px;
+			height: 40px;
+			width: 400px;
+			border: none;
+		}
 			
+		button:hover
+		{
+			background-image: url("button/pressed.png");
+		}
+		
+		.checkbox-input
+		{
+  			display: none;
+		}
+
+		.checkbox-custom
+		{
+			background-image: url("checkbox/checkbox.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+		}
+
+		.checkbox-input:checked + .checkbox-custom
+		{
+			background-image: url("checkbox/checkboxActive.png");
 		}
 		
 		</style>
+		
 	</head>
 
 	<body style="font-family:Minecraftia">
 
 		<main>
-		
-			<p>Testing</p>
 			
-			<a style="font-size: 24px" href="https://github.com/Theredblood53/Minecraft-Stack-Calculator">Current Git-Hub Page</a>
+			<h1>Minecraft Stack Calculator</h1>
+			
+			<br><br>
+			
+			<p style="padding: 0px 35%">
+				<a>Number of raw Items: </a>
+				<input type="number" id="rawNumber" style="font-family:Minecraftia">
+			</p>
+				
+			<p style="padding: 0px 25%">
+				<button onClick="rawToStack()">Raw Item to Stacks</button>
+				<button onClick="stackToRaw()">Stacks to Raw Items</button>
+			</p>
+			
+			<p style="padding: 0px 23%">
+				<a>Number of Stacks: </a>
+				<input type="number" id="stackNumber" style="font-family:Minecraftia">
+				<a>Number of Excess Items: </a>
+				<input type="number" id="excessNumber" style="font-family:Minecraftia">
+			</p>
+			
+			<label class="checkbox-label">
+  				<input type="checkbox" class="checkbox-input" id="checkboxStack">
+  				<span class="checkbox-custom"></span>
+			</label>
+			
+			<a>Is the stack of 16? </a>
+			
+			<br><br>
+			
+			<a style="font-size: 20px" href="https://github.com/Theredblood53/Minecraft-Stack-Calculator">Current Git-Hub Page</a>
 			
 		</main>
 		
